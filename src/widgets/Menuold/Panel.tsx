@@ -12,7 +12,7 @@ interface Props extends PanelProps, PushedProps {
 
 const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   position: fixed;
-  //padding-top: ${({ showMenu }) => (showMenu ? "80px" : 0)};
+  padding-top: ${({ showMenu }) => (showMenu ? "26px" : 0)};
   top: 0;
   left: 0;
   display: flex;
@@ -21,7 +21,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-shrink: 0;
   background-color: ${({ theme }) => theme.nav.background};
   width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
-  height: 100vh;
+  height: calc( 100% - 40px);
   transition: padding-top 0.2s, width 0.2s;
   border-right: ${({ isPushed }) => (isPushed ? "2px solid rgba(133, 133, 133, 0.1)" : 0)};
   z-index: 11;
@@ -37,7 +37,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 const Panel: React.FC<Props> = (props) => {
   const { isPushed, showMenu } = props;
   return (
-    <StyledPanel isPushed={isPushed} showMenu={showMenu}>
+    <StyledPanel isPushed={isPushed} showMenu={showMenu} className="styledpanelcss">
       <PanelBody {...props} />
       <PanelFooter {...props} />
     </StyledPanel>

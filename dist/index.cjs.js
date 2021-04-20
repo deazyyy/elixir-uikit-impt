@@ -1997,7 +1997,7 @@ var Logo$1 = function (_a) {
     var innerLogo = (React__default['default'].createElement(React__default['default'].Fragment, null,
         React__default['default'].createElement(Icon$q, { className: "mobile-icon" }),
         React__default['default'].createElement(Logo, { className: "desktop-icon", isDark: isDark })));
-    return (React__default['default'].createElement(Flex, null,
+    return (React__default['default'].createElement(Flex, { className: "menutoplogo" },
         React__default['default'].createElement(MenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px" }, isPushed ? (React__default['default'].createElement(Icon$L, { width: "24px", color: "textSubtle" })) : (React__default['default'].createElement(Icon$K, { width: "24px", color: "textSubtle" }))),
         isAbsoluteUrl ? (React__default['default'].createElement(StyledLink$1, { as: "a", href: href, "aria-label": "Pancake home page" }, innerLogo)) : (React__default['default'].createElement(StyledLink$1, { to: href, "aria-label": "Pancake home page" }, innerLogo))));
 };
@@ -2233,7 +2233,7 @@ var PanelFooter = function (_a) {
     return (React__default['default'].createElement(Container$4, null,
         React__default['default'].createElement("div", { className: "panelFooter" },
             React__default['default'].createElement("img", { src: "images/profile.png", alt: "img" }),
-            React__default['default'].createElement("h2", null, "Don\u2019t miss out our daily portion mix"),
+            React__default['default'].createElement("h2", null, "Don\u2019t miss out the daily lottery"),
             React__default['default'].createElement(Button, null,
                 React__default['default'].createElement(Link, { href: "/farms" }, "Farm Now"))),
         React__default['default'].createElement(SettingsEntry, null,

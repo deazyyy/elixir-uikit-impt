@@ -79,7 +79,7 @@ return (
 <Container>
   <div className="panelFooter">
     <img src="images/profile.png" alt="img"/>
-    <h2>Don’t miss out our daily portion mix</h2>
+    <h2>Don’t miss out the daily lottery</h2>
     <Button><Link href="/farms">Farm Now</Link></Button>
   </div>
   

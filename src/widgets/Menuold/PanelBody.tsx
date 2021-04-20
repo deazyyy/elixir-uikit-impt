@@ -7,8 +7,6 @@ import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import { PanelProps, PushedProps } from "./types";
-import Logo from "./Logo";
-import { Flex } from "../../components/Flex";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
@@ -25,7 +23,8 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const PanelBody: React.FC<Props> = ({ isDark,isPushed, pushNav, isMobile, links }) => {
+
+const PanelBody: React.FC<Props> = ({ isDark, isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile
@@ -33,18 +32,16 @@ const PanelBody: React.FC<Props> = ({ isDark,isPushed, pushNav, isMobile, links 
 
   return (
     <Container>
-
-      {/* <nav>
-
-        <Logo isDark={false} href="/" togglePush={() => 0} isPushed={isPushed} />
-      </nav> */}
+      
       <img width="160" height="51" src={isDark ? 'images/navw.png' : 'images/navb.png'} alt="navimg" className="navlogo"/>
       {links.map((entry) => {
         const Icon = Icons[entry.icon];
         const iconElement = <Icon width="24px" mr="8px" />;
-        const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
+        const calloutClass = entry.calloutClass ? entry.calloutClass : undefined ;
 
         if (entry.items) {
+
+       
           return (
             <Accordion
               key={entry.label}
@@ -54,11 +51,14 @@ const PanelBody: React.FC<Props> = ({ isDark,isPushed, pushNav, isMobile, links 
               label={entry.label}
               initialOpenState={entry.initialOpenState}
               className={`${calloutClass} menulinkouter`}
-            >
+            >             
+            
               {isPushed &&
                 entry.items.map((item) => (
+           
                   <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick} className="navaccordion">
-                    <MenuLink href={item.href} color="inherit">{item.label}</MenuLink>
+                    
+                    <MenuLink target={item.external ? "_blank" : ""}  href={item.href}>{item.label}</MenuLink>
                   </MenuEntry>
                 ))}
             </Accordion>
@@ -66,11 +66,13 @@ const PanelBody: React.FC<Props> = ({ isDark,isPushed, pushNav, isMobile, links 
         }
         return (
           <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={`${calloutClass} menulinkouter`}>
-            <MenuLink href={entry.href} onClick={handleClick}>
+            
+            <MenuLink target={entry.external ? "_blank" : ""}   href={entry.href} onClick={handleClick}>
               {iconElement}
               <LinkLabel isPushed={isPushed}>{entry.label}</LinkLabel>
               <div className="btn_shiny"/>
             </MenuLink>
+            
           </MenuEntry>
         );
       })}

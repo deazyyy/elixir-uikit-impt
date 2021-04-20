@@ -23,8 +23,8 @@ const StyledLink = styled(Link)`
     }
   }
   .desktop-icon {
-    width: 156px;
-    display: none;
+    width: 300px !important;
+    margin-left: -55px;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
     }
@@ -41,7 +41,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   );
 
   return (
-    <Flex flexDirection="column" justifyContent="flex-start" alignItems="center">
+    <Flex>
       <MenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
         {isPushed ? (
           <HamburgerCloseIcon width="24px" color="textSubtle" />

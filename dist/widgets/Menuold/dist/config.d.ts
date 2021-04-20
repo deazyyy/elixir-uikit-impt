@@ -1,4 +1,5 @@
-export declare const links: ({
+export var __esModule: boolean;
+export var links: ({
     label: string;
     icon: string;
     href: string;
@@ -12,7 +13,7 @@ export declare const links: ({
     }[];
     href?: undefined;
 })[];
-export declare const socials: ({
+export var socials: ({
     label: string;
     icon: string;
     items: {
@@ -26,7 +27,7 @@ export declare const socials: ({
     href: string;
     items?: undefined;
 })[];
-export declare const MENU_HEIGHT = 64;
-export declare const MENU_ENTRY_HEIGHT = 42;
-export declare const SIDEBAR_WIDTH_FULL = 240;
-export declare const SIDEBAR_WIDTH_REDUCED = 90;
+export var MENU_HEIGHT: number;
+export var MENU_ENTRY_HEIGHT: number;
+export var SIDEBAR_WIDTH_FULL: number;
+export var SIDEBAR_WIDTH_REDUCED: number;
