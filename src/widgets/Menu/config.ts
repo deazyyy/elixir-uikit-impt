@@ -77,38 +77,12 @@ export const socials = [
   {
     label: 'Telegram',
     icon: 'TelegramIcon',
-    items: [
-      {
-        label: 'Announcements',
-        href: 'https://t.me/slimefinanceann',
-      },
-      {
-        label: 'EN',
-        href: 'https://t.me/slimefinance',
-      },
-      {
-        label: 'ES',
-        href: 'https://t.me/slimefinanceES',
-      },
-      {
-        label: 'CN',
-        href: 'https://t.me/slimefinanceCN',
-      },
-      {
-        label: 'FR',
-        href: 'https://t.me/slimefinanceFR',
-      },
-
-      // {
-      //   label: "Whale Alert",
-      //   href: "https://t.me/PancakeSwapWhales",
-      // },
-    ],
+    href:'https://t.me/ElixirSwap',
   },
   {
     label: 'Twitter',
     icon: 'TwitterIcon',
-    href: 'https://twitter.com/slimefinance',
+    href: 'https://twitter.com/ElixirSwapFarm',
   },
 ]
 export const MENU_HEIGHT = 64
