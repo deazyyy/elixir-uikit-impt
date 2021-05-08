@@ -2067,33 +2067,12 @@ var socials = [
     {
         label: 'Telegram',
         icon: 'TelegramIcon',
-        items: [
-            {
-                label: 'Announcements',
-                href: 'https://t.me/slimefinanceann',
-            },
-            {
-                label: 'EN',
-                href: 'https://t.me/slimefinance',
-            },
-            {
-                label: 'ES',
-                href: 'https://t.me/slimefinanceES',
-            },
-            {
-                label: 'CN',
-                href: 'https://t.me/slimefinanceCN',
-            },
-            {
-                label: 'FR',
-                href: 'https://t.me/slimefinanceFR',
-            },
-        ],
+        href: 'https://t.me/ElixirSwap',
     },
     {
         label: 'Twitter',
         icon: 'TwitterIcon',
-        href: 'https://twitter.com/slimefinance',
+        href: 'https://twitter.com/ElixirSwapFarm',
     },
 ];
 var MENU_HEIGHT = 64;
@@ -2220,23 +2199,34 @@ var PanelFooter = function (_a) {
     return (React.createElement(Container$4, null,
         React.createElement("div", { className: "panelFooter" },
             React.createElement("img", { src: "images/profile.png", alt: "img" }),
-            React.createElement("h2", null, "Don\u2019t miss out the daily lottery"),
+            React.createElement("h2", null, "Don\u2019t miss out on our farms !"),
             React.createElement(Button, null,
                 React.createElement(Link, { href: "/farms" }, "Farm Now"))),
         React.createElement(SettingsEntry, null,
             React.createElement(SocialEntry, { style: { display: "flex", justifyContent: "center" } }, cakePriceUsd ? (React.createElement(PriceLink, { href: priceLink, target: "_blank" },
                 React.createElement("img", { src: "images/elixircirc.png", width: "30", height: "30", style: { marginRight: "4px" }, alt: "img" }),
                 React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 }))),
-            React.createElement(Flex, null, socials.map(function (social, index) {
-                var Icon = Icons$1[social.icon];
-                var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
-                var mr = index < socials.length - 1 ? "8px" : 0;
-                if (social.items) {
-                    return (React.createElement(Dropdown, { key: social.label, position: "top", target: React.createElement(Icon, __assign({}, iconProps, { mr: mr })) }, social.items.map(function (item) { return (React.createElement(Link, { external: true, key: item.label, href: item.href, "aria-label": item.label, color: "textSubtle" }, item.label)); })));
-                }
-                return (React.createElement(Link, { external: true, key: social.label, href: social.href, "aria-label": social.label, mr: mr },
-                    React.createElement(Icon, __assign({}, iconProps))));
-            })))));
+            React.createElement(Flex, null,
+                socials.map(function (social, index) {
+                    var Icon = Icons$1[social.icon];
+                    var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
+                    var mr = index < socials.length - 1 ? "8px" : 0;
+                    // if (social.items) {
+                    //   return (
+                    //     <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
+                    //       {social.items.map((item) => (
+                    //         <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtle">
+                    //           {item.label}
+                    //         </Link>
+                    //       ))}
+                    //     </Dropdown>
+                    //   );
+                    // }
+                    return (React.createElement(Link, { external: true, key: social.label, href: social.href, "aria-label": social.label, mr: mr },
+                        React.createElement(Icon, __assign({}, iconProps))));
+                }),
+                React.createElement("a", { target: "_blank", "aria-label": "Discord", href: "https://discord.gg/mG7EcYa3c9" },
+                    React.createElement("i", { className: "fab fa-discord", style: { fontSize: "24px" } }))))));
 };
 var templateObject_1$C, templateObject_2$c, templateObject_3$7, templateObject_4$2;
 

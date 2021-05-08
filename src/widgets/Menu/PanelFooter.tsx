@@ -137,6 +137,8 @@ return (
           </Link>
         );
       })}
+      <a target="_blank" aria-label="Discord" href="https://discord.gg/mG7EcYa3c9"><i className="fab fa-discord" style={{fontSize:"22px",color:"#c0c0c4",marginLeft:"8px"}}></i></a>
+      
     </Flex>
   </SettingsEntry>
 </Container>
