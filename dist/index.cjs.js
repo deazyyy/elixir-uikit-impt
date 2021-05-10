@@ -1984,7 +1984,7 @@ MenuButton.defaultProps = {
 };
 var templateObject_1$x;
 
-var StyledLink$1 = styled__default['default'](reactRouterDom.Link)(templateObject_1$y || (templateObject_1$y = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 300px !important;\n    margin-left: -55px;\n    ", " {\n      display: block;\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 300px !important;\n    margin-left: -55px;\n    ", " {\n      display: block;\n    }\n  }\n"])), function (_a) {
+var StyledLink$1 = styled__default['default'](reactRouterDom.Link)(templateObject_1$y || (templateObject_1$y = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 300px ;\n    margin-left: -55px;\n    ", " {\n      display: block;\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 300px ;\n    margin-left: -55px;\n    ", " {\n      display: block;\n    }\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {
@@ -2203,7 +2203,7 @@ var PriceLink = styled__default['default'].a(templateObject_2$c || (templateObje
 var SettingsEntry = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\nheight: ", "px;\npadding: 0 8px;\n"], ["\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\nheight: ", "px;\npadding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled__default['default'].div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\nheight: ", "px;\npadding: 0 16px;\n"], ["\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;\nheight: ", "px;\npadding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd; _a.currentLang; _a.langs; _a.setLang; var priceLink = _a.priceLink;
+    var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd; _a.currentLang; _a.langs; _a.setLang; _a.priceLink;
     if (!isPushed) {
         return (React__default['default'].createElement(Container$4, null,
             React__default['default'].createElement(IconButton, { variant: "text", onClick: function () { return pushNav(true); } },
@@ -2216,7 +2216,7 @@ var PanelFooter = function (_a) {
             React__default['default'].createElement(Button, null,
                 React__default['default'].createElement(Link, { href: "/farms" }, "Farm Now"))),
         React__default['default'].createElement(SettingsEntry, null,
-            React__default['default'].createElement(SocialEntry, { style: { display: "flex", justifyContent: "center" } }, cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: priceLink, target: "_blank" },
+            React__default['default'].createElement(SocialEntry, { style: { display: "flex", justifyContent: "center" } }, cakePriceUsd ? (React__default['default'].createElement(PriceLink, null,
                 React__default['default'].createElement("img", { src: "images/elixircirc.png", width: "30", height: "30", style: { marginRight: "4px" }, alt: "img" }),
                 React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }))),
             React__default['default'].createElement(Flex, null,
@@ -2239,7 +2239,7 @@ var PanelFooter = function (_a) {
                         React__default['default'].createElement(Icon, __assign({}, iconProps))));
                 }),
                 React__default['default'].createElement("a", { target: "_blank", "aria-label": "Discord", href: "https://discord.gg/mG7EcYa3c9" },
-                    React__default['default'].createElement("i", { className: "fab fa-discord", style: { fontSize: "24px" } }))))));
+                    React__default['default'].createElement("i", { className: "fab fa-discord", style: { fontSize: "22px", color: "#c0c0c4", marginLeft: "8px" } }))))));
 };
 var templateObject_1$C, templateObject_2$c, templateObject_3$7, templateObject_4$2;
 
