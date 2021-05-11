@@ -80,7 +80,7 @@ return (
   <div className="panelFooter">
     <img src="images/profile.png" alt="img"/>
     <h2>Don’t miss out on our farms !</h2>
-    <Button><Link href="/farms">Farm Now</Link></Button>
+    <a href="https://www.elixir-swap.io/farms"><Button>Farm Now</Button></a>
   </div>
   
   <SettingsEntry>
